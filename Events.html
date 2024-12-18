@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript">
+    var valone;
+    var valtwo;
+    var result;
+    var result1;
+  function showOne()
+  {
+    valone=prompt("Enter fIrst value",10);
+  }
+  function showtwo()
+  {
+    valtwo=prompt("Enter Second value",10);
+
+  }
+  function showthree()
+  {
+     result=confirm("Do you want to add");
+    if(result==true)
+  {
+      result1=parseInt(valone)+parseInt(valtwo);
+    alert("Addition is:"+result1);
+  }
+  else{
+    alert("Thanks");
+  }
+  }
+
+</script>
+  <title>Document</title>
+</head>
+<body>
+  <input type="button" name="s" value="Enter the First Value" onclick="showOne()" />
+  <input type="button" name="s" value="Enter the Second Value"onclick="showtwo()" />
+  <input type="button" name="s" value="Enter the third Value"onclick="showthree()" />
+  
+</body> 
+</html>

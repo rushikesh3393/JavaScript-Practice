@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Multiplication</title>
+    <script type="text/javascript">
+     function showTable()
+     {
+       var container=document.getElementById("tabContainer");
+		container.innerHTML="";
+
+	    var no = parseInt(document.getElementById("n").value);
+
+        var table=document.createElement("table");
+        table.width="80%";
+        table.height="70 %";
+        table.border="3";
+        table.magin="20px"
+
+        var headingRow=document.createElement("tr");
+        headingRow.border="none";
+
+        var thIteration=document.createElement("th");
+        thIteration.innerHTML="Iteration";
+        headingRow.append(thIteration);
+
+        var thmul=document.createElement("th");
+        thmul.innerHTML=" x ";
+        headingRow.append(thmul);
+
+        var thNum=document.createElement("th");
+        thNum.innerHTML="Number";
+        headingRow.append(thNum);
+
+        var thEql=document.createElement("th");
+        thEql.innerHTML="=";
+        headingRow.append(thEql);
+
+        var thresult=document.createElement("th");
+        thresult.innerHTML="Result";
+        headingRow.append(thresult);
+
+        table.append(headingRow);
+
+     for(var i=1;i<=10;i++)
+     {
+        let tableRow=document.createElement("tr");
+        tableRow.align="center";
+
+        let col1=document.createElement("td");
+        col1.innerHTML=""+i;
+        tableRow.append(col1);
+
+        let col2=document.createElement("td");
+        col2.innerHTML="x";
+        tableRow.append(col2);
+
+        let col3=document.createElement("td");
+        col3.innerHTML=""+no;
+        tableRow.append(col3);
+
+        let col4=document.createElement("td");
+        col4.innerHTML="=";
+        tableRow.append(col4);
+
+        let result=i*no;
+        let col5=document.createElement("td");
+        col5.innerHTML=""+result;
+        tableRow.append(col5);
+
+        table.append(tableRow);
+     }
+     container.append(table);
+}
+    </script>
+</head>
+<body>
+    <center>
+    <input type="text" name="name" id="n" value="" placeholder="Enter the Number" style="width:400px; height: 40px;">
+
+    
+    <input type="submit" name="n" value="Print Table"  style="width:400px; height: 45px;" onclick="showTable()">
+    <div id="tabContainer">
+
+    </div>
+</center>
+</body>
+</html>

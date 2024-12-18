@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function show()
+        {
+           var firstobj=document.getElementById("ff");
+            var secondobj=document.getElementById("ss");
+            var thirdtxt=document.getElementById("tt");
+
+
+           var firstval=firstobj.value;
+           var secondval=secondobj.value;
+
+           var result=parseInt(firstval)+parseInt(secondval);
+            thirdtxt.value=""+result;
+
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <input type="text" name="f" id="ff" value="">
+    <input type="text" name="s" id="ss" value="">
+    <input type="text" name="t" id="tt" value="">
+    <input type="submit" name="cal" id="cc" value="" onclick="show()">
+    
+</body>
+</html>

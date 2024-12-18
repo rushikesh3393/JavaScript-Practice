@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <script type="text/javascript">
+       function show() {
+    var no = parseInt(document.getElementById("txtbox").value);
+    var divele = document.getElementById("divapp");
+
+    var table = document.createElement("table");
+    var headingRow = document.createElement("tr");
+
+    var iteration = document.createElement("th");
+    iteration.textContent = "Iteration";
+    headingRow.appendChild(iteration);
+
+    var thMul = document.createElement("th");
+    thMul.textContent = "X";
+    headingRow.appendChild(thMul);
+
+    var thNum = document.createElement("th");
+    thNum.textContent = "Number";
+    headingRow.appendChild(thNum);
+
+    var theEq = document.createElement("th");
+    theEq.textContent = "=";
+    headingRow.appendChild(theEq);
+
+    var resultTh = document.createElement("th");
+    resultTh.textContent = "Result";
+    headingRow.appendChild(resultTh);
+
+    table.appendChild(headingRow);
+
+    for (var i = 1; i <= 10; i++) {
+        let tableRow = document.createElement("tr");
+        
+        let col1 = document.createElement("td");
+        col1.textContent = i.toString();
+        tableRow.appendChild(col1);
+        
+        let col2 = document.createElement("td");
+        col2.textContent = "X";
+        tableRow.appendChild(col2);
+        
+        let col3 = document.createElement("td");
+        col3.textContent = no.toString();
+        tableRow.appendChild(col3);
+        
+        let col4 = document.createElement("td");
+        col4.textContent = "=";
+        tableRow.appendChild(col4);
+        
+        let result = i * no;
+        let col5 = document.createElement("td");
+        col5.textContent = result.toString();
+        tableRow.appendChild(col5);
+
+        table.appendChild(tableRow);
+    }
+    
+    divele.innerHTML = ''; // Clear existing content
+    divele.appendChild(table);
+}
+
+
+    </script>
+</head>
+<body>
+    <input type="text" name="s" value="" id="txtbox" >
+    <input type="button" name="b" value="Get Table" onclick="show()">
+
+    <div id="divapp">
+
+    </div>
+
+    
+</body>
+</html>
